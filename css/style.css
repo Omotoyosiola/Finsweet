@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+
+ :root {
+     --tint-blue: #1C1E53;
+     --royal-blue: #2405F2;
+     --dark-blue: #282938;
+     --grey: #F4F6FC;
+     --yellow: #FCD980;
+     --accent: #EEF4FA;
+ } 
+ /* RESET */
+
+ /* BASE SYTLES */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+     padding: 0;
+ }
+
+ html, body {
+     font-family: 'Poppins', sans-serif;
+     color: #000000;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-style: normal;
+ }
+
+h1 {
+    font-size: 54px;
+ }
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 32px;
+}
+
+h6 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.yel-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--yellow);
+    border-radius: 40px;
+    border: none;
+    padding: 16px 48px;
+    color: #000;
+}
+
+
+.yel-btn:hover {
+    background: #FDE4A6;
+}
+
+.dark-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--dark-blue);
+    border-radius: 40px;
+    border: none;
+    padding: 16px 48px;
+    color: #fff;
+}
+
+.dark-btn:hover {
+    background: #535460;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    max-width: 100%;
+    background: var(--tint-blue);
+    justify-content: space-between;
+    padding: 20px 100px;
+    z-index: 30;
+}
+
+.nav-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--tint-blue);
+    border-radius: 41px;
+    border: solid 1px #fff;
+    padding: 16px 48px;
+    color: #fff;
+}
+
+.nav-btn:hover {
+    background: #535460;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.menu-btn {
+    width: 25px;
+    height: 15px;
+    margin: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/* FAQs SECTION */
+
+#faqs-container {
+    grid-template-columns: 1fr 2fr;
+    padding: 100px;
+    gap: 40px;
+}
+
+.faqs-title h4 {
+    line-height: 54px;
+    margin-bottom: 20px;
+}
+
+.faqs-title a {
+    color: var(--royal-blue);
+}
+
+.faqs-title a:hover {
+    cursor: pointer;
+    text-decoration: underline var(--royal-blue);
+}
+
+.accordion {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.collapsible {
+    position: relative;
+    color: #282938;
+    border-bottom: 1.5px solid var(--dark-blue);
+    display: grid;
+}
+
+.label-head {
+    grid-template-columns: 1fr 9fr;
+    padding: 20px;
+    background: #fff;
+}
+
+.label-head #faq-num {
+    color: var(--royal-blue);
+}
+
+.collapsible .label-head .label {
+    position: relative;
+    cursor: pointer;
+}
+
+.collapsible .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-weight: 500;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.collapsible.active .label-head .label::before {
+    content: 'X';
+    font-size: 16px;
+}
+
+.collapsible .collapsible-text {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.collapsible-text p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.collapsible.active .collapsible-text {
+    height: 100px;
+    padding: 10px 0px;
+    padding-left: 12.5%;
+    padding-right: 15%;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--tint-blue);
+}
+
+.finsweet-container {
+    padding: 100px 130px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.finsweet-content {
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    margin-right: auto;
+}
+
+.finsweet-content img {
+    margin: 10px 0px;
+}
+
+.finsweet-content div p {
+    color: #fff;
+    padding-right: 30%;
+    line-height: 25px;
+}
+
+.contact-us {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: var(--yellow);
+    padding: 30px;
+}
+
+#contact-me-text {
+    color: #282938;
+    font-weight: 600;
+}
+
+#contact-me-num {
+    color: #282938;
+}
+
+.lets-talk {
+    margin-right: 40%;
+}
+
+.lets-talk h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.lets-talk div p {
+    color: #fff;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.lets-talk div ol {
+    list-style: none;
+}
+
+.lets-talk div ol li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.foot-bar {
+    background: #fff;
+    justify-content: space-between;
+    padding: 30px 130px;
+}
+
+#foot-text {
+    font-weight: 500;   
+}
+
+.foot-links li {
+    display: inline-block;
+}
+
+.foot-links li a {
+    font-size: 16px;
+    color: #282938;
+    padding: 0px 20px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 1200px) {
+
+    /* BASE FONT STYLES @1200px*/
+
+    h1 {
+        font-size: 40px;
+     }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    h4 {
+        font-size: 26px;
+    }
+    
+    h5 {
+        font-size: 22px;
+    }
+    
+    h6 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .yel-btn {
+        font-size: 12px;
+        padding: 12px 32px;
+    }
+    
+    .dark-btn {
+        font-size: 12px;
+        padding: 12px 32px;
+    }
+    
+    .dark-btn:hover {
+        background: #535460;
+    }
+
+    a {
+        font-size: 12px;
+    }
+    
+    /* NAVIGATION BAR @1200px*/
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        padding: 10px 5px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .nav-btn {
+        font-size: 12px;
+        padding: 12px 48px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    /* FOOTER */
+
+    .finsweet-container {
+        padding: 40px 70px 0;
+        gap: 30px;
+    }
+
+    .finsweet-content {
+        gap: 30px;
+    }
+
+    .finsweet-content img {
+        margin: 5px 0px;
+    }
+
+    .finsweet-content div p {
+        line-height: 20px;
+    }
+
+    .contact-us {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+        margin-right: 20%;
+    }
+
+    .lets-talk {
+        margin-right: auto;
+    }
+
+    .lets-talk h2 {
+        margin-bottom: 7px;
+    }
+
+    .lets-talk div p {
+        line-height: 20px;
+        margin-bottom: 7px;
+    }
+
+    .lets-talk div ol li {
+        padding-right: 15px;
+    }
+
+    .foot-bar {
+        padding: 15px 70px;
+    }
+
+    .foot-links li a {
+        font-size: 12px;
+        padding: 0px 15px;
+    }
+    /* FAQs SECTION  @1200px */
+
+    #faqs-container {
+        padding: 50px;
+        gap: 10px;
+    }
+
+    .faqs-title h4 {
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+
+    .faqs-title a {
+        color: var(--royal-blue);
+    }
+
+    .accordion {
+        grid-template-columns: 1fr;
+    }
+
+    .label-head {
+        padding: 15px;
+    }
+
+    .collapsible .label::before {
+        right: 0px;
+        font-size: 20px;
+    }
+
+    .collapsible.active .label-head .label::before {
+        font-size: 12px;
+    }
+
+    .collapsible-text p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .collapsible.active .collapsible-text {
+        height: 70px;
+        padding: 5px 0px;
+        padding-left: 12.5%;
+        padding-right: 15%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* BASE FONT STYLES @600px*/
+
+    h1 {
+        font-size: 27px;
+    }
+   
+    h2 {
+       font-size: 24px;
+   }
+   
+   h3 {
+       font-size: 19px;
+   }
+   
+   h4 {
+       font-size: 18px;
+   }
+   
+   h5 {
+        font-size: 16px;
+   }
+   
+   h6 {
+        font-size: 12px;
+   }
+
+   p {
+        font-size: 10px;
+   }
+
+   .yel-btn {
+    font-size: 10px;
+    padding: 8px 24px;
+    }
+
+    .dark-btn {
+        font-size: 10px;
+        padding: 8px 24px;
+    }
+
+    /* NAVIGATION BAR @600px*/
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        padding: 0; 
+    }
+    
+    .logo {
+        padding: 20px 10px;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: var(--tint-blue);
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0px;
+        border-bottom-right-radius: 30px;
+    }
+    
+    .nav-links li {
+        margin: 20px auto;
+    }
+
+    .nav-links li a {
+        font-size: 12px;
+    }
+
+   /* FAQs SECTION  @600px */
+
+    #faqs-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .faqs-title {
+        text-align: center;
+    }
+
+    .faqs-title h4 {
+        line-height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .faqs-title a {
+        font-size: 10px;
+    }
+
+    .collapsible .label::before {
+        font-size: 16px;
+    }
+
+    .collapsible.active .label-head .label::before {
+        font-size: 10px;
+    }
+
+    .collapsible-text p {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    /* FOOTER @600px */
+
+    .finsweet-container {
+        padding: 10px 20px 0;
+        gap: 10px;
+    }
+
+    .finsweet-content {
+        gap: 10px;
+    }
+
+    .finsweet-content img {
+        width: 80px;
+    }
+
+    .finsweet-content div p {
+        line-height: 12px;
+    }
+
+    .contact-us {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 10px;
+
+    }
+
+    .lets-talk h2 {
+        margin-bottom: 5px;
+    }
+
+    .lets-talk div p {
+        line-height: 12px;
+        margin-bottom: 5px;
+    }
+
+    .lets-talk div ol li {
+        padding-right: 10px;
+    }
+
+    .lets-talk div ol li img {
+        width: 10px;
+    }
+
+    .foot-bar {
+        padding: 10px 20px;
+    }
+
+    .foot-links li a {
+        font-size: 8px;
+        padding: 0px 5px;
+    }
+}

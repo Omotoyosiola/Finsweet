@@ -1,0 +1,74 @@
+/* Use-Client-first SECTION */
+
+.use-client-first {
+    padding: 100px;
+    background: #fff;
+}
+
+.free-revision {
+    padding: 100px;
+    background: var(--grey);
+}
+
+.support247 {
+    padding: 100px;
+    background: #fff; 
+}
+
+.quick-delivery {
+    padding: 100px;
+    background: #FCD9801A;
+}
+
+@media (max-width: 1200px) {
+    .use-client-first {
+        padding: 50px;
+    }
+
+    .free-revision {
+        padding: 50px;
+    }
+
+    .support247 {
+        padding: 50px;
+    }
+
+    .quick-delivery {
+        padding: 50px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .use-client-first {
+        padding: 20px;
+    }
+
+    .use-client-first .about-us-container div img {
+        display: none;
+    }
+
+    .free-revision {
+        padding: 20px;
+    }
+
+    .free-revision .about-us-container div img {
+        display: none;
+    }
+
+    .support247 {
+        padding: 20px;
+    }
+
+    .support247 .about-us-container div img {
+        display: none;
+    }
+
+    .quick-delivery {
+        padding: 20px;
+    }
+
+    .quick-delivery .about-us-container div img {
+        display: none;
+    }
+}

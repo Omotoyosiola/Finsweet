@@ -1,0 +1,139 @@
+
+/* PRICING PLAN SECTION */
+.pricing-plans {
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-plans #pricing-plans-head-text {
+    margin: 3% 0;
+    padding: 0 25%;
+}
+
+.pricing-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.pricing-content {
+    text-align: center;
+    padding: 10%;
+    background: #F4F6FC;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.pricing-content ol {
+    text-align: left;
+    list-style: none;
+}
+
+.pricing-content ol li {
+    margin-bottom: 4%;
+    display: inline-block;
+    padding-right: 3%;
+}
+
+.pricing-content ol li p {
+    color: var(--royal-blue);
+}
+
+.pricing-content h6 {
+    text-align: left;
+}
+
+.pricing-content p {
+    text-align: left;
+    margin: 4% 0;
+    color: var(--dark-blue);
+}
+
+.pricing-content ul {
+    margin-top: 15%;
+    list-style-type: none;
+}
+  
+ .pricing-content ul li {
+    padding-left: 2rem;
+    padding-top: 0rem;
+    background-image: url(/images/svgs/Green_pointer.svg);
+    background-position: 0 0rem;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+
+.pricing-content ul #grey-out {
+    background-image: url(/images/svgs/grey_pointer.svg);
+    mix-blend-mode: luminosity;
+}
+
+.pricing-content ul #grey-out p {
+    opacity: 0.7;
+}
+
+.pricing-content ul li p {
+    margin: 6% 0;
+}
+
+.pricing-content a {
+    text-align: center;
+}
+
+.pricing-content button {
+    margin: 15% 0;
+}
+
+.pricing-content.pricing-2 {
+    background: #1C1E53;
+    color: #fff;
+}
+
+.pricing-content.pricing-2 ol li p {
+    color: var(--yellow);
+}
+
+.pricing-content.pricing-2 p {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    
+    /* PRICING CONTAINER SECTION @1200px*/
+
+    .pricing-plans {
+        padding: 50px;
+    }
+
+    .pricing-container {
+        gap: 30px;
+    }
+
+    .pricing-content ul li {
+        background-size: 15px 15px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    
+    /* PRICING CONTAINER SECTION @600px*/
+
+    .pricing-plans {
+        padding: 20px;
+    }
+
+    .pricing-plans #pricing-plans-head-text {
+        padding: 0 10%;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-content ul li {
+        background-size: 15px 15px;
+    }
+
+
+}
